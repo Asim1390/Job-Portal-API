@@ -1,0 +1,31 @@
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card" style="width: 18rem;">
+        
+        <!-- Buttons in the card header -->
+        <div class="card-header d-flex justify-content-between">
+          <a href="/jobListings" class="btn btn btn-danger">delete </a>
+          <a href="/<%= job.id %>/updateJob" class="btn btn-primary">update</a>
+
+        </div>
+        
+        <div class="card-body">
+          <h5 class="card-title"><%= job.jobdesignation %></h5>
+          <h6 class="card-subtitle mb-2 text-muted"><%= job.jobcategory %></h6>
+          <p class="card-text">Location: <%= job.joblocation %></p>
+          <p class="card-text">Company: <%= job.companyname %></p>
+          <p class="card-text">Salary: <%= job.salary %></p>
+          <p class="card-text">Apply by: <%= job.applyby %></p>
+          <p class="card-text">Skills Required: <%= job.skillsrequired %></p>
+          <p class="card-text">Number of Openings: <%= job.numberofopenings %></p>
+          <a href="/jobDetails/<%= job.id%>/applicantList" class="card-link">View Applicants</a>
+          <div class="col-md-12 text-center">
+            <a type="button" class="btn btn-success" href="/jobDetails/<%= job.id%>/apply">Apply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

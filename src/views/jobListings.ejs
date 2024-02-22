@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row">
+      <% Jobs.jobList.forEach(job => { %>
+        <div class="col-md-4 mb-3">
+          <div class="card" style="width: 18rem;">
+            <div class="card-body">
+              <h5 class="card-title"><%= job.jobdesignation %></h5>
+              <h6 class="card-subtitle mb-2 text-muted"><%= job.jobcategory %></h6>
+              <p class="card-text">Location: <%= job.joblocation %></p>
+              <p class="card-text">Company: <%= job.companyname %></p>
+              <p class="card-text">Salary: <%= job.salary %></p>
+              <a href="/jobDetails/<%= job.id %>" class="card-link">Details</a>
+              
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+  

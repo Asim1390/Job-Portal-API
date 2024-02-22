@@ -1,0 +1,26 @@
+<h1>Applicants for Job </h1>
+
+  <% if (applicants && applicants.length > 0) { %>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+          <th>Resume Path</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% applicants.forEach((applicant) => { %>
+          <tr>
+            <td><%= applicant.name %></td>
+            <td><%= applicant.email %></td>
+            <td><%= applicant.contact %></td>
+            <td><%= applicant.resumePath %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  <% } else { %>
+    <p>No applicants found for this job.</p>
+  <% } %>

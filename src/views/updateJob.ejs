@@ -1,0 +1,57 @@
+<div class="container mt-5">
+    <h2>Update Job Details</h2>
+    <form action="/<%= job.id %>/updateJob" method="post" enctype="multipart/form-data">
+
+        <!-- Hidden field to store job ID -->
+        <input type="hidden" name="jobId" value="<%= job.id %>">
+
+        <div class="form-group">
+            <label for="jobcategory">Job Category:</label>
+            <input type="text" class="form-control" id="jobcategory"
+                name="jobcategory" value="<%= job.jobcategory %>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jobdesignation">Job Designation:</label>
+            <input type="text" class="form-control" id="jobdesignation"
+                name="jobdesignation" value="<%= job.jobdesignation %>"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="joblocation">Job Location:</label>
+            <input type="text" class="form-control" id="joblocation"
+                name="joblocation" value="<%= job.joblocation %>" required>
+        </div>
+
+        <div class="form-group">
+            <label for="joblocation">companyname:</label>
+            <input type="text" class="form-control" id="companyname"
+                name="companyname" value="<%= job.companyname %>" required>
+        </div>
+        <div class="form-group">
+            <label for="joblocation">salary:</label>
+            <input type="text" class="form-control" id="salary" name="salary"
+                value="<%= job.salary %>" required>
+        </div>
+        <div class="form-group">
+            <label for="joblocation">applyby:</label>
+            <input type="date" class="form-control" id="applyby" name="applyby"
+                value="<%= job.applyby %>" required>
+        </div>
+        <div class="form-group">
+            <label for="joblocation">Job Location:</label>
+            <input type="text" class="form-control" id="skillsrequired"
+                name="skillsrequired" value="<%= job.skillsrequired %>"
+                required>
+        </div>
+        <div class="form-group">
+            <label for="joblocation">Number Of Openings:</label>
+            <input type="number" class="form-control" id="numberofopenings"
+                name="numberofopenings" value="<%= job.numberofopenings %>"
+                required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Update Job</button>
+    </form>
+</div>
